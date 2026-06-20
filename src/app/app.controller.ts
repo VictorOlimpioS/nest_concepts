@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('example')
+  example() {
+    return 'This is an example endpoint';
+  }
 }
