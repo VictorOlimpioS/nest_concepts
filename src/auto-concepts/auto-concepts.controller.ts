@@ -1,9 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
+import { AutoConceptsService } from './auto-concepts.service';
 
 @Controller('auto-concepts')
 export class AutoConceptsController {
+  constructor(private readonly autoConceptsService: AutoConceptsService) {}
   @Get()
   home(): string {
-    return 'Welcome to the Auto Concepts Module!';
+    return this.autoConceptsService.home();
   }
 }

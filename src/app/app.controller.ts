@@ -12,6 +12,6 @@ export class AppController {
 
   @Get('example')
   example() {
-    return 'This is an example endpoint';
+    return this.appService.example();
   }
 }
