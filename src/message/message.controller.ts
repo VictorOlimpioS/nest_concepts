@@ -5,6 +5,7 @@ import {
   HttpCode,
   HttpStatus,
   Param,
+  Patch,
   Post,
 } from '@nestjs/common';
 
@@ -24,5 +25,11 @@ export class MessageController {
   @Post()
   create(@Body() body: unknown) {
     return body;
+  }
+
+  @HttpCode(HttpStatus.OK)
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() body: unknown) {
+    return `This route updates a message by id ${id} with the provided data: ${JSON.stringify(body)}`;
   }
 }
