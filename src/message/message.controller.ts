@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   HttpStatus,
@@ -31,5 +32,11 @@ export class MessageController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: unknown) {
     return `This route updates a message by id ${id} with the provided data: ${JSON.stringify(body)}`;
+  }
+
+  @HttpCode(HttpStatus.OK)
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return `This route removes a message with id: ${id}`;
   }
 }

@@ -48,3 +48,9 @@ Content-Type: application/json
 {
     "message": "This is the updated message"
 }
+
+
+### UpdateMessage
+DELETE  {{baseUrl}}/message/1
+
+
