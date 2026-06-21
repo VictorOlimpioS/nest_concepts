@@ -20,3 +20,23 @@ GET {{baseUrl}}/concepts
 ### AutoConceptsControllerGetHome
 # @name AutoConceptsControllerGetHome
 GET {{baseUrl}}/auto-concepts
+
+
+## -- ##
+
+## MESSAGE ROUTES
+
+### MessagefindAll
+GET {{baseUrl}}/message
+
+### MessageFindById
+GET {{baseUrl}}/message/1
+
+### CreateMessage
+POST {{baseUrl}}/message/
+Content-Type: application/json
+
+{
+    "sender": "User One",
+    "message": "This is the message"
+}
